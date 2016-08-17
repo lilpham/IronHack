@@ -1,0 +1,25 @@
+Notes.txt
+
+Init 
+git init is used to create a repository 
+
+Status
+git status tells us the state of our working directory 
+
+Add
+git add tells git to track specific files or folders 
+
+to stage certain changes with Patch Mode, we use git add -p
+
+Ignoring Things
+.gitignore files tell git what to completely ignore 
+
+Commit logs
+git log shows us all the commits that were made 
+
+git log --oneline shows a summary of all commits 
+
+Branches
+Git branches are like different universes we can experiment in 
+git branch shows all our branches
+To create a new branch, use git branch <name>
