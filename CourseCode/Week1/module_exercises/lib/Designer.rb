@@ -12,7 +12,7 @@ class Designer
 	end
 
 	def select_typography 
-		puts "I create stuff"
+		puts "I create stuff and hate comic sans"
 	end 
 
 	def select_colors
