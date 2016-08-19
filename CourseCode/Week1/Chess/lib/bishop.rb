@@ -1,5 +1,6 @@
+#bishop.rb
 
-class Rook 
+class Bishop 
 	def initialize(x, y, color)
 		@x = x 
 		@y = y
@@ -7,10 +8,10 @@ class Rook
 	end 
 
 	def can_move?(final_x, final_y)
-		if final_x == @x || final_y == @y
+		if (final_x - @x).abs == (final_y - @y).abs 
 			true
 		else
 			false
 		end
-	end
+	end 
 end 

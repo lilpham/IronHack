@@ -3,7 +3,7 @@
 require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
 require_relative("lib/knight.rb")
-# require_relative("lib/piece.rb")
+require_relative("lib/bishop.rb")
 
 black_rook_right = Rook.new(7, 6, "black")
 black_rook_left = Rook.new(1, 8, "black")
@@ -17,6 +17,11 @@ black_knight_right = Knight.new(7, 8, "black")
 black_knight_left = Knight.new(2, 8, "black")
 white_knight_right = Knight.new(7, 1, "white")
 white_knight_left = Knight.new(2, 1, "white")
+
+black_bishop_right = Bishop.new(6, 8, "black")
+black_bishop_left = Bishop.new(3, 8, "black")
+white_bishop_right = Bishop.new(6, 1, "white")
+white_bishop_left = Bishop.new(3, 1, "white")
 
 puts "Valid Rook movements"
 puts " - - - - - - - - - - "
@@ -37,10 +42,19 @@ puts
 puts "Valid Knight movements"
 puts " - - - - - - - - - - "
 
-p black_knight_right.can_move?(8,6)
+p black_knight_right.can_move?(8, 6)
 p black_knight_left.can_move?(1, 6)
 p white_knight_right.can_move?(6, 3)
 p white_knight_left.can_move?(1, 3)
+
+puts
+puts "Valid Bishop movements"
+puts " - - - - - - - - - - "
+
+p black_bishop_right.can_move?(4, 6)
+p black_bishop_left.can_move?(1, 6) 
+p white_bishop_right.can_move?(2, 5)
+p white_bishop_left.can_move?(5, 3)
 
 puts
 puts "Invalid Rook movements"
@@ -68,3 +82,12 @@ p black_knight_right.can_move?(7, 6)
 p black_knight_left.can_move?(4, 6)
 p white_knight_right.can_move?(4, 4)
 p white_knight_left.can_move?(1, 1)
+
+puts
+puts "Invalid Bishop movements"
+puts " - - - - - - - - - - "
+
+p black_bishop_right.can_move?(6, 5)
+p black_bishop_left.can_move?(2, 6) 
+p white_bishop_right.can_move?(6, 2)
+p white_bishop_left.can_move?(1, 1)
