@@ -8,7 +8,10 @@ class Bishop
 	end 
 
 	def can_move?(final_x, final_y)
-		if (final_x - @x).abs == (final_y - @y).abs 
+		x_diff = (final_x - @x)
+		y_diff = (final_y - @y)
+		
+		if x_diff.abs == y_diff.abs 
 			true
 		else
 			false

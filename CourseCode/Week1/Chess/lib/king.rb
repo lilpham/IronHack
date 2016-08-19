@@ -8,11 +8,14 @@ class King
 	end 
 
 	def can_move?(final_x, final_y)
-		if (final_x - @x) == 1 && final_y == @y || (final_x - @x) == -1 && final_y == @y
+		x_diff = (final_x - @x)
+		y_diff = (final_y - @y)
+
+		if x_diff == 1 && final_y == @y || x_diff == -1 && final_y == @y
 			true
-		elsif final_x == @x && (final_y - @y) == 1 || final_x == @x && (final_y - @y) == -1
+		elsif final_x == @x && y_diff == 1 || final_x == @x && y_diff == -1
 			true 
-		elsif (final_x - @x) == -1 && (final_y - @y) == -1 || (final_x - @x) == 1 && (final_y - @y) == 1
+		elsif x_diff == -1 && y_diff == -1 || x_diff == 1 && y_diff == 1
 			true 
 		else
 			false
