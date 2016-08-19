@@ -1,11 +1,11 @@
 
 class Chess_Board
 	def initialize(pieces)
-		@pieces = []
+		@pieces = [ ]
     end
 
     def
-   		board_can_move?#(x,y)(final_x, final_y)
+   		board_can_move?(      ) #(x,y)(final_x, final_y)
 
     end
 
@@ -13,8 +13,13 @@ class Chess_Board
     	x_pos = pieces.x 
     	y_pos = pieces.y 
 
-    	@pieces.push(x_pos)
-    	@pieces.push(y_pos)
+    	@pieces[ [ 
+    	 ] ]
+
 
     end
 end
+
+[nil,         ]
+
+#incomplete
