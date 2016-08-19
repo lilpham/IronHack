@@ -1,6 +1,7 @@
 #king.rb
 
 class King 
+	attr_accessor :x, :y, :color
 	def initialize(x, y, color)
 		@x = x 
 		@y = y

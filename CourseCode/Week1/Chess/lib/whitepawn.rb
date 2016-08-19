@@ -1,6 +1,7 @@
 #pawn.rb
 
 class White_Pawn
+	attr_accessor :x, :y, :color
 	def initialize(x, y, color)
 		@x = x 
 		@y = y
@@ -23,7 +24,7 @@ class White_Pawn
 	def can_move?(final_x, final_y)
 		x_diff = (final_x - @x)
 		y_diff = (final_y - @y)
-		
+
 		if x_diff == 0 && y_diff == 1
 			true 
 		else

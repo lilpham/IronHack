@@ -1,5 +1,6 @@
 #app.rb
 
+# require_relative("lib/piece.rb")
 require_relative("lib/rook.rb")
 require_relative("lib/king.rb")
 require_relative("lib/knight.rb")
@@ -7,6 +8,8 @@ require_relative("lib/bishop.rb")
 require_relative("lib/queen.rb")
 require_relative("lib/whitepawn.rb")
 require_relative("lib/blackpawn.rb")
+require_relative("lib/chessboard.rb")
+
 
 black_rook_right = Rook.new(7, 6, "black")
 black_rook_left = Rook.new(1, 8, "black")
