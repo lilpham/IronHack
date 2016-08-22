@@ -18,6 +18,18 @@ RSpec.describe Task do
 	end
 
 	it "returns true if the task is currently in completion" do
+		@task.complete!("Collect bags of money")
+		
+		expect(@task.complete?("Collect bags of money")).to eq(true)
+	end
+
+	it "returns false to make a completed task status to incomplete" do
+		@task.complete!("Collect bags of money")
+		@task.make_incomplete!("Collect bags of money")
+
+		expect(@task.complete?("Collect bags of money")).to eq(false)
+	end
+
 end
 
 

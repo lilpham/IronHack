@@ -1,3 +1,5 @@
+# require 'time'
+
 class Task
     attr_reader :content, :id
 
@@ -7,10 +9,19 @@ class Task
         @content = content
         @id = @@current_id
         @@current_id += 1
+        @completed = false
+        # @created_at = time.now 
     end
 
     def complete?(task)
-    	false
+    	@completed
     end
 
+    def complete!(task)
+    	@completed = true
+    end
+
+    def make_incomplete!(task)
+    	@completed = false
+    end
 end
