@@ -1,7 +1,7 @@
 # require 'time'
 
 class Task
-    attr_reader :content, :id, :task
+    attr_reader :content, :id
 
     @@current_id = 1
 
@@ -11,6 +11,7 @@ class Task
         @@current_id += 1
         @completed = false
         # @created_at = time.now 
+        # @updated_at = time.now
     end
 
     def complete?(task)
