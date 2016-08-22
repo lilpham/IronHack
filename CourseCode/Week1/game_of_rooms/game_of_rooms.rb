@@ -1,4 +1,4 @@
-require_relative("lib/Location.rb")
+# require_relative("lib/Location.rb")
 
 class Game_of_Rooms 
 	def initialize
@@ -90,15 +90,15 @@ class Game_of_Rooms
 	end
 end
 
-class Rooms 
+# class Rooms 
 
-la = Location.new()
+# la = Location.new()
 
 
 game = Game_of_Rooms.new
-game.add_location()
+# game.add_location()
 
-player.start
+game.start
 
 
 
