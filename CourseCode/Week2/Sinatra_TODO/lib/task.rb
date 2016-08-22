@@ -1,7 +1,7 @@
 # require 'time'
 
 class Task
-    attr_reader :content, :id
+    attr_reader :content, :id, :task
 
     @@current_id = 1
 
@@ -23,5 +23,10 @@ class Task
 
     def make_incomplete!(task)
     	@completed = false
+    end
+
+    def update_content!(updated_task)
+    	@content = content 
+    	@content.replace(updated_task)
     end
 end

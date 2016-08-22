@@ -14,22 +14,27 @@ RSpec.describe Task do
 	end
 
 	it "returns false if the task is completed" do
-		expect(@task.complete?("Collect bags of money")).to eq(false)
+		expect(@task.complete?(@content)).to eq(false)
 	end
 
 	it "returns true if the task is currently in completion" do
-		@task.complete!("Collect bags of money")
-		
-		expect(@task.complete?("Collect bags of money")).to eq(true)
+		@task.complete!(@content)
+
+		expect(@task.complete?(@content)).to eq(true)
 	end
 
 	it "returns false to make a completed task status to incomplete" do
-		@task.complete!("Collect bags of money")
-		@task.make_incomplete!("Collect bags of money")
+		@task.complete!(@content)
+		@task.make_incomplete!(@content)
 
-		expect(@task.complete?("Collect bags of money")).to eq(false)
+		expect(@task.complete?(@content)).to eq(false)
 	end
 
+	it "updates the current task with an updated task string" do 
+		@task.complete!(@content)
+
+		expect(@task.update_content!(@content)).to eq("Buy tacos and pizza immediately")
+	end 
 end
 
 
