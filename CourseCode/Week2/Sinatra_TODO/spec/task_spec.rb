@@ -17,6 +17,7 @@ RSpec.describe Task do
 		expect(@task.complete?("Collect bags of money")).to eq(false)
 	end
 
+	it "returns true if the task is currently in completion" do
 end
 
 
