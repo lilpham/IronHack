@@ -25,8 +25,7 @@ class Task
     	@completed = false
     end
 
-    def update_content!(updated_task)
-    	@content = content 
-    	@content.replace(updated_task)
+    def update_content!(updated_content)
+    	@content = updated_content
     end
 end
