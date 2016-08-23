@@ -1,0 +1,18 @@
+<!-- views/favorite_pizza.erb --> 
+
+
+<link rel="stylesheet" href="/styles.css">
+
+<h1> P I Z Z A .. pizza </h1>
+
+<img src="/pizza.gif">
+<ul>
+
+	<% @pizza_ingredients.each do |the_ingredient| %>
+
+	<li>
+		Ingredient: <%= the_ingredient %>
+	</li>
+	<% end %>
+</ul>
+

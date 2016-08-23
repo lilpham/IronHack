@@ -33,7 +33,7 @@ RSpec.describe Task do
 	it "updates the current task with an updated task string" do 
 		@task.complete!(@content)
 
-		expect(@task.update_content!("Buy tacos and pizza immediately")).to eq("Buy tacos and pizza immediately")
+		expect(@task.update_content!("Collect bags of clothes")).to eq("Collect bags of clothes")
 	end 
 end
 
