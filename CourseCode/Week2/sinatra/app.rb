@@ -1,6 +1,10 @@
 #app.rb
 
 require "sinatra"
+require "sinatra/reloader" if development?
+require "pry"
+
+enable(:sessions)
 
 get "/" do 
 	erb :home
@@ -38,9 +42,25 @@ get "/users/:username" do
 
 	@the_user = users.find { |the_user| the_user[:username] == @user_name_string }
 
+	# binding.pry
+
 	if @the_user == nil
+		status(404)
 		erb :no_user
 	else
 		erb :user_profile
 	end
 end 
+
+get "/leadership" do 
+	erb :leadership
+end
+
+get "/session_test/:text" do
+	text = params[:text]
+	session[:saved_value] = text
+end 
+
+get "/session_show" do 
+	"Now in the session: " + session[:saved_value]
+end
