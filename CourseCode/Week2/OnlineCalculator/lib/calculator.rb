@@ -1,14 +1,18 @@
 class Calculator
 
-	def add
+	def add(first, second)
+		first + second
 	end
 
-	def subtract
+	def subtract(first, second)
+		first - second
 	end
 
-	def multiply
+	def multiply(first, second)
+		first * second
 	end
 
-	def divide
+	def divide(first, second)
+		first % second.to_f
 	end
 end
