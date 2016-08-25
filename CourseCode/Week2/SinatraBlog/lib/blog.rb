@@ -11,18 +11,18 @@ class Blog
 		@posts.push(the_post)
 	end 
 
-	def publish_pages
-		@posts.each do |the_post|
-		if (the_post.sponsored) == true
-			puts "*****#{the_post.title}*****"
+	def latest_posts
+		@posts.sort do |a,b|
+			b.date <=> a.date
+		end
+	end
 
-		else 
+	def publish_pages
+		@posts.each do |the_post| 
 			puts "#{the_post.title}"
 			puts "#{the_post.date}"
 			puts "#{the_post.text}"
-
 			puts ""
-		end
 		end
 	end
 end

@@ -2,6 +2,11 @@ require 'sinatra'
 require_relative("lib/blog.rb")
 require_relative("lib/post.rb")
 
+get '/' do 
+	@posts = lillys_blog.post
+	erb :home 
+end
+
 lillys_blog = Blog.new
 # lillys_blog.add_post(post1) Post.new("Post 1", "16/7/10", "Hello, world. Welcome!")
 # lillys_blog.add_post(post2) Post.new("Post 2", "16/7/1", "Here I am again!")
@@ -12,8 +17,3 @@ lillys_blog = Blog.new
 # lillys_blog.add_post(post7) Post.new("Post 7", "16/8/7", "Hi again.")
 # lillys_blog.add_post(post8) Post.new("Post 8", "16/8/10", "Love my blog?")
 # lillys_blog.add_post(post9) Post.new("Post 9", "16/8/12", "Howdy")
-
-get '/' do 
-	@posts = lillys_blog.post
-	erb :home 
-end
