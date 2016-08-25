@@ -1,6 +1,6 @@
 class Blog 
-	def initialize(title)
-	@title = title
+	attr_accessor :posts
+	def initialize
 	@posts = []
 
 	@page_start = 0
@@ -11,26 +11,18 @@ class Blog
 		@posts.push(the_post)
 	end 
 
-	def next_page 
-
 	def publish_pages
 		@posts.each do |the_post|
-			if (the_post.sponsored) == true
+		if (the_post.sponsored) == true
 			puts "*****#{the_post.title}*****"
 
 		else 
 			puts "#{the_post.title}"
-		end
 			puts "#{the_post.date}"
 			puts "#{the_post.text}"
 
 			puts ""
-
 		end
-		puts "1 2 3"
-			puts "> next"
-			puts ""
+		end
 	end
-
-	
 end
