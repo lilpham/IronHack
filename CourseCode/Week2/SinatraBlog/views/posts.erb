@@ -1,0 +1,10 @@
+<!--views/posts.erb-->
+<h1> P O S T S </h1>
+
+<% @posts.each do |post| %>
+	<b><a href='/posts/id'> <%= post.title %></a></b>
+	<br>
+	<%= post.date %>
+	<br>
+	<br>
+<% end %>

@@ -1,6 +1,15 @@
 <!--views/home.erb-->
 
-<% @posts.each do |post| %>
-	<%= post.title %>
-	<%= post.date %>
-<% end %>
+<h1> W E L C O M E </h1>
+
+<p>
+<br> Today is 
+	<%= Date.today %>
+<br> 
+
+<a href='/posts'> View All Posts </a> 
+<br> 
+<a href='/create_new_post'> Create A New Post</a>
+<br>
+
+</p>
