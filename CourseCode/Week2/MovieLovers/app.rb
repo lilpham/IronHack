@@ -7,7 +7,11 @@ get "/" do
 	erb :home
 end 
 
-post '/search' do
+get '/search' do
+	erb :search
+end 
+
+post '/submit_search' do
 	@movies = the_search.movies 
 	movie = Imdb::Search.new(params[:movie_title])
 	@movies.push(movie)
@@ -21,4 +25,3 @@ get "/search_results" do
 
 	erb :results
 end 
-
