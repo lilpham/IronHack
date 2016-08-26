@@ -21,7 +21,7 @@ class Blog
 		@posts.each do |the_post| 
 			puts "#{the_post.title}"
 			puts "#{the_post.date}"
-			puts "#{the_post.text}"
+			puts "#{the_post.content}"
 			puts ""
 		end
 	end

@@ -18,7 +18,6 @@ RSpec.describe Blog do
 		@blog.add_post(post2)
 		@blog.add_post(@the_post)
 		expect(@blog.latest_posts[0].title).to eq("Post 1")
-		# expect(@blog.latest_posts.length).to eq(2)
 
 	end
 end

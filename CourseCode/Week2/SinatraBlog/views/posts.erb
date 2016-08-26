@@ -1,8 +1,8 @@
 <!--views/posts.erb-->
 <h1> P O S T S </h1>
 
-<% @posts.each do |post| %>
-	<b><a href='/posts/id'> <%= post.title %></a></b>
+<% @posts.each_with_index do |post, index| %>
+	<b><a href='/posts/details/<%=index%>'> <%= post.title%></a></b>
 	<br>
 	<%= post.date %>
 	<br>

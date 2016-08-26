@@ -1,10 +1,11 @@
 class Post 
-	attr_accessor(:title, :date, :text)
+	attr_accessor(:title, :date, :content)
+ 	
 
-	def initialize (title, date, text)
+	def initialize (title, date, content)
 		@title = title
 		@date = date
-		@text = text
+		@content = content
 	end 
 
 end
