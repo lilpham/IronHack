@@ -1,0 +1,24 @@
+.box {
+	background-color: #a7d8e2;
+	border-style: dotted;
+	border-color: #cd687c;
+	margin: 10px 10px 10px 10px; 
+	color: #333333;
+}
+
+#red {
+	background-color: #cd687c;
+	border-style: dotted;
+	border-color: #a7d8e2;
+	color: #333333
+}
+
+h3 {
+	padding: 20px 20px 20px 20px;
+}
+
+#top {
+	position: absolute;
+	top: 350px;
+	left: 350px ;
+}
