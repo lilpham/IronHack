@@ -4,8 +4,7 @@ require "imdb"
 
 require_relative("lib/Search.rb")
 
-the_thing = Movie_Search.new
-
+the_movie = Movie_Search.new
 
 get "/" do 
 	erb :home
@@ -15,8 +14,9 @@ get '/search' do
 	erb :search
 end 
 
-
 post '/search_results' do
-	@movies = the_thing.search_movie(params[:movie_title])	
+	@movies = the_movie.search_movie(params[:movie_title])
+	@correct_movie = @movies.sample	
 	erb :results
 end 
+

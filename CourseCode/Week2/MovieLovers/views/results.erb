@@ -1,12 +1,30 @@
-<h1> R E S U L T S </h1>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+	<title></title>
+</head>
+<body>
+	<h1> T R I V I A </h1>
+	<p>
+	  Showing
+	  <strong> <%= @movies.length %> </strong>
+	  results.
+	</p>
+	<br>
 
-<p>
-  Showing
-  <strong> <%= @movies.length %> </strong>
-  results.
-</p>
+	<strong> Question 1: Which movie came out in <em><%=@correct_movie.year%></em>? </strong>
+	<br>
 
-<% @movies.each do |the_movie| %>
-  <img src="<%= the_movie.poster %>">
-<% end %>
+	<% @movies.each do |the_movie| %>
+	   <% if the_movie.year == @correct_movie.year %>
+	      <img src="<%= the_movie.poster %>"
+	  		onClick="alert('YOU DID IT')"> 
+	    <%else%>
+	    	<img src="<%= the_movie.poster %>"
+			onClick="alert('SORRY. Try Again')">
+	<% end %>
+  
 
+</body>
+</html>
