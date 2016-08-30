@@ -1,0 +1,29 @@
+#header-image {
+	background-image: url('https://media.giphy.com/media/3oEjHTB8Rz4t1tQutO/giphy.gif');
+	background-repeat: no-repeat;
+	height: 500px;
+}
+
+
+@media screen and (min-width: 768px) {
+	#header-image {
+		background-image: url(https://media.giphy.com/media/FIw3DP7rOsmTS/giphy.gif);
+		height: 400px;
+	}
+}
+
+
+
+@media screen and (min-width: 992px) {
+	#header-image {
+		background-image: url(https://media.giphy.com/media/J6Y87I5nxKCuA/giphy.gif);
+		height: 400px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#header-image {
+		background-image: url('https://media.giphy.com/media/sNiM59sMnLx8k/giphy.gif');
+		height: 500px;
+	}
+}
