@@ -1,24 +1,20 @@
-color_array = ["indigo", "teal", "lilac", "periwinkle", "teal", "black", "baby bluet", "teal"]
+require_relative("lib/color_counter.rb")
 
-def count_colors(color, color_array)
-	color_array.each do |the_color|
-		if the_color == color
-			count += 1
-		end
-	end
-
-	count
-end
-
-
-
+color_array = ["indigo", "teal", "lilac", "periwinkle", "teal", "black", "baby blue", "teal", "periwinkle"]
 
 p color_array
 
-count_colors("indigo", color_array) == 1
-count_colors("periwinkle", color_array) == 2
-count_colors("teal", color_array) == 3
+the_counting_machine = ColorCounter.new
 
-count_colors("green", color_array) == 0
-count_colors("navy blue", color_array) == 0
+the_counting_machine.count_colors("indigo", color_array) == 1
+the_counting_machine.count_colors("periwinkle", color_array) == 2
+the_counting_machine.count_colors("teal", color_array) == 3
 
+the_counting_machine.count_colors("green", color_array) == 0
+the_counting_machine.count_colors("navy blue", color_array) == 0
+
+caps_colors = color_array.map do |the_color| 
+	the_color.upcase
+end 
+
+p caps_colors
