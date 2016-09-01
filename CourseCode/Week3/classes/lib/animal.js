@@ -1,25 +1,30 @@
 // lib/animal.js
 
-function Animal (name, noise) {
-	// @name = name
-	this.name = name
+"use strict";
 
-	// @noise = noise
-	this.noise = noise
+class Animal {
+	constructor (name, noise) {
 
-} // end
+		// @name = name
+		this.name = name;
 
-//def make_noise
-Animal.prototype.makeNoise = function () {
-	//puts "#{name} says: #{noise}"
-	console.log( this.name + " says: " + this.noise );
-}; 
+		// @noise = noise
+		this.noise = noise;
 
-//def shout
-Animal.prototype.shout = function () {
-	//puts @noise.upcase
-	console.log( this.noise.toUpperCase() );
-}; 
+	} // end
+
+	//def make_noise
+	makeNoise () {
+		//puts "#{name} says: #{noise}"
+		console.log( this.name + " says: " + this.noise );
+	} 
+
+	//def shout
+	shout () {
+		//puts @noise.upcase
+		console.log( this.noise.toUpperCase() );
+	}
+}
 
 module.exports = Animal;
 //when you pull in the animals class, you are pulling in 'Animal'
