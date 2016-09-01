@@ -12,7 +12,7 @@ function Animal (name, noise) {
 //def make_noise
 Animal.prototype.makeNoise = function () {
 	//puts "#{name} says: #{noise}"
-	console.log( this.name + "says:" + this.noise );
+	console.log( this.name + " says: " + this.noise );
 }; 
 
 //def shout
@@ -20,3 +20,6 @@ Animal.prototype.shout = function () {
 	//puts @noise.upcase
 	console.log( this.noise.toUpperCase() );
 }; 
+
+module.exports = Animal;
+//when you pull in the animals class, you are pulling in 'Animal'
