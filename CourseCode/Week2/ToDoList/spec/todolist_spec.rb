@@ -6,4 +6,3 @@ RSpec.describe ToDoList do
 	end
 end
 
-
