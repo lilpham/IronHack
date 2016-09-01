@@ -16,7 +16,7 @@ class Animal {
 	//def make_noise
 	makeNoise () {
 		//puts "#{name} says: #{noise}"
-		console.log( this.name + " says: " + this.noise );
+		console.log( `${this.name} says ${this.noise}` );
 	} 
 
 	//def shout
