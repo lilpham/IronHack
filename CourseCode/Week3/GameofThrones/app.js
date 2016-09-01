@@ -10,12 +10,22 @@ function fileActions(err, file){
 
 
 	episodes.forEach(function (eachEpisode) {
-		console.log(eachEpisode.title);
+		
+		eachEpisode.star = "*";
+		var numStars = eachEpisode.rating.round; 
+			while (eachEpisode.star.length < numStars) {
+				eachEpisode.star += "*";
+			console.log(eachEpisode.star);
+			};
+
+
+		console.log(`Title: ${eachEpisode.title}  Episode: ${eachEpisode.episode_number}`);
 		console.log(eachEpisode.description);
-		console.log(eachEpisode.rating);
-		console.log(eachEpisode.episode_number);
+		console.log(`Rating: ${eachEpisode.rating} ${eachEpisode.star} \n`);
 
 	});
+
+
 }
 
 fs.readFile("./GoTEpisodes.json", 'utf8', fileActions);
