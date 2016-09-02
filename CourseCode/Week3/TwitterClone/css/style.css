@@ -55,10 +55,24 @@ body {
 	color: #847f7f;
 	margin-top: 18px;
 	margin-left: 10px;
-}
-
-p {
 	word-spacing: 30px;
 }
 
+h4 {
+	position: relative;
+	top: -110px;
+	left: 18px;
+}
+
+#tweets {
+	background-color: #e6e6e6;
+
+}
+
+p {
+	color: #9c9ea9;
+	position: relative;
+	top: -119px;
+	left: 18px;
+}
 
