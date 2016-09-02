@@ -50,6 +50,28 @@ body {
 	right: -180px;
 }
 
+.search-input {
+	display: block;
+    width: 46%;
+    height: 32px;
+    font-size: 12px;
+    line-height: 1;
+    color: #292f33;
+    background-color: #f5f8fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 21px;
+    margin-top: 10px;
+}
+
+#search {
+	position: absolute;
+    top: 10px;
+    right: 190px;
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
 .stats-text {
 	font-size: 12px;
 	color: #847f7f;
@@ -65,7 +87,7 @@ h4 {
 }
 
 #tweets {
-	background-color: #e6e6e6;
+	background-color: #e1e8ed;
 
 }
 
