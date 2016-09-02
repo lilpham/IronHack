@@ -10,10 +10,6 @@
 	width: 30px;
 }
 
-#cover {
-	width: 90%;
-}
-
 #home-icon {
 	margin-left: 10px;
 }
@@ -44,12 +40,25 @@ body {
 	left: 20px;
 }
 
-#stats {
-	border-style: solid;
-	border-width: 1px;
-	border-color: #847f7f;
+#left-icons {
+	margin-top: 6px;
 }
 
-#left-icons {
-	margin-top: 4px;
+#mini-thumbnail {
+	position: relative;
+	top: 8px;
+	right: -180px;
 }
+
+.stats-text {
+	font-size: 12px;
+	color: #847f7f;
+	margin-top: 18px;
+	margin-left: 10px;
+}
+
+p {
+	word-spacing: 30px;
+}
+
+
