@@ -1,0 +1,29 @@
+#logo {
+	display: block;
+	margin-top: 6px;
+	margin-left: 150px;
+	margin-bottom: 8px;
+}
+
+#cover {
+	width: 90%;
+}
+
+#home-icon {
+	color: #333;
+	width: 10%;
+	margin-left: 10px;
+}
+
+body {
+	font-family: "Helvetica Neue";
+}
+
+#header img {
+	display: inline;
+}
+
+#header {
+	font-size: 12px;
+	margin-top: 2px;
+}

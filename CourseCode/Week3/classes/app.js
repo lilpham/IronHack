@@ -1,4 +1,7 @@
 // app.js
+
+"use strict";
+
 var Animal = require("./lib/animal.js");
 
 var dymitri = new Animal("Dymitri", "Huff.."); 

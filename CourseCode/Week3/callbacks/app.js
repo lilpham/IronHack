@@ -23,11 +23,19 @@ var theOptions = { prompt: "What is your name?"};
 
 function greetUser (theError, givenName) {
 	console.log(`Hello, ${givenName}.`);
+
+	var options2 = {prompt: "What is your date of birth?"}
+	function displayBday (theError, birthDate) {
+	console.log(`You were born: ${birthDate}`);
+}
+
+	read(options2, displayBday);
 }
 
 read(theOptions, greetUser);
 
-//
+
+//======================
 
 function shout (){
 	console.log("5 seconds");
