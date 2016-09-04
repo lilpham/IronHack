@@ -1,7 +1,7 @@
 #logo {
 	display: block;
 	margin-top: 6px;
-	margin-left: 150px;
+	margin-left: 105px;
 	margin-bottom: 8px;
 }
 
@@ -47,7 +47,7 @@ body {
 #mini-thumbnail {
 	position: relative;
 	top: -30px;
-	right: -200px;
+	right: -240px;
 }
 
 .search-input {
@@ -65,11 +65,12 @@ body {
 
 #search {
 	position: absolute;
-    top: 10px;
-    right: 190px;
+    top: 12px;
+    right: 230px;
     display: block;
     width: 26px;
     height: 26px;
+    font-size: 12px;
 }
 
 .stats-text {
