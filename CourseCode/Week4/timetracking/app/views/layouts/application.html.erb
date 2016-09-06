@@ -9,18 +9,14 @@
   </head>
 
   <body>
-  	<header>
-  		<h1>TimeTracker</h1>
-
-  		<ul>
-  			<li>
-  				<a href="/">Home</a>
-  			</li>
-  			<li>
-  				<a href="/contact">Contact</a>
-  			</li>
-  		</ul>
-  	</header>
+  	<%= render("other_stuff/header") %> 
     <%= yield %>
+
+    <hr>
+
+    <footer>
+    	<p> Made with TLC by Ironhack</p>
+    </footer>
+
   </body>
 </html>
