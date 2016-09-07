@@ -1,16 +1,18 @@
 <h1>Address Book </h1>
 
 <ul>
+
 <% @contacts.each do |contact| %>
 	
 <li>
-<a href="/contacts/<%contact.id%>">
+	<a href="/show/<%contact.id%>">
 
-	<%=contact.name %>	
+	<%= contact.name %>	
 	</a>
 </li>
 	
 <% end %>
+
 </ul>
 
 <%= link_to "Add Contact", contacts_new_path%>

@@ -1,7 +1,6 @@
 class ContactsController < ApplicationController
 	def index
 		@contacts = Contact.order("name ASC")
-
 	end 
 
 	def new
@@ -10,7 +9,7 @@ class ContactsController < ApplicationController
 
 	def create
 		contact = Contact.new(
-	      :name => params[:contact][:name],
+	      :name => params[:contact][:name].downcase.capitalize,
 	      :address => params[:contact][:address],
 	      :phone => params[:contact][:phone],
 	      :email => params[:contact][:email])
@@ -21,7 +20,7 @@ class ContactsController < ApplicationController
 	end
 
 	def show
-		@contact = Contact.find_by(id: params[:id])
+		@contacts = Contact.find_by(id: params[:id])
 		render "show"
 	end 
 
