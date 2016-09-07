@@ -15,9 +15,6 @@ class TextInspectionsController < ApplicationController
 			frequencies[x] += 1
 		end 
 
-		frequencies = frequencies.sort_by{|a, b| b}
-		frequencies.reverse!
-
 		frequencies.each do |word, value|
 			@frequency = word + value.to_s
 		end
