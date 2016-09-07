@@ -14,9 +14,11 @@ class ContactsController < ApplicationController
 	      :phone => params[:contact][:phone],
 	      :email => params[:contact][:email])
 		
-		contact.save
-
-		redirect_to("/contacts")
+		if contact.name == "" && contact.address == "" && contact.phone == "" && contact.email == ""
+			redirect_to("/contacts/new")
+		else
+			contact.save
+		end
 	end
 
 	def show
