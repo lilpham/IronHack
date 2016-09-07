@@ -1,6 +1,9 @@
 <h1>Address Book </h1>
 
-<a href="/contacts">Contacts</a>
+<ul>
+<% @contacts.each do |contact| %>
+	<li><%= contact.name %></li>
+<% end %>
+</ul>
 
-<a href="/contacts/new">Create New Contact</a>
-
+<a href="/contacts/new">Add Contact</a>

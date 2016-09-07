@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-contact = Contact.create(name: 'Alain', address:'1300 Broad Avenue' , phone:'9012982345', email: 'Alain@alain.com')
-contact = Contact.create(name: 'Meneti', address:'140 Brickell Bay Drive' , phone:'3033033030', email: 'Meneti@meneti.com')
-contact = Contact.create(name: 'Bob', address:'1700 Ocean Avenue' , phone:'1234567432', email: 'bob@bob.com')
-contact = Contact.create(name: 'Dan', address:'1900 Park Avenue' , phone:'0973217894', email: 'dan@dan.com')
+Contact.create!(name: 'Alain', address:'1300 Broad Avenue' , phone:'9012982345', email: 'Alain@alain.com')
+Contact.create!(name: 'Meneti', address:'140 Brickell Bay Drive' , phone:'3033033030', email: 'Meneti@meneti.com')
+Contact.create!(name: 'Bob', address:'1700 Ocean Avenue' , phone:'1234567432', email: 'bob@bob.com')
+Contact.create!(name: 'Dan', address:'1900 Park Avenue' , phone:'0973217894', email: 'dan@dan.com')
