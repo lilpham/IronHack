@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
 	def index
-		@contacts=Contact.all
+		@contacts = Contact.order("name ASC")
+
 	end 
 
 	def new
@@ -18,5 +19,10 @@ class ContactsController < ApplicationController
 
 		redirect_to("/contacts")
 	end
+
+	def show
+		@contact = Contact.find_by(id: params[:id])
+		render "show"
+	end 
 
 end
