@@ -26,4 +26,8 @@ class ContactsController < ApplicationController
 		render "show"
 	end 
 
+	def favorite
+		
+
+	end
 end

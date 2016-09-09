@@ -1,5 +1,6 @@
 <h2> New Project </h2>
 
+
 <!-- <form action="input"> -->
 <%= form_for @project do |f| %>
 	<div>
@@ -8,11 +9,12 @@
 
 	<!-- <input type="text" name="[project][name]"> -->
 	<%= f.text_field :name %>
+
 	</div>
 	<br>
 	<div>
 	<!-- <label>Description</label> -->
-	<%= f.label :name %>
+	<%= f.label :description %>
 
 	<!-- <input type="text" name="[project][description]"> -->
 	<%= f.text_area :description %>

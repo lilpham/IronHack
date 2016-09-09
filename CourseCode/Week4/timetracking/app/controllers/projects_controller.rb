@@ -17,11 +17,11 @@ class ProjectsController < ApplicationController
 	end 
 
 	def create
-		project = Project.new(
+		@project = Project.new(
 			name: params[:project][:name],
 			description: params[:project][:description])
 
-		project.save
+		@project.save
 
 		redirect_to("/projects/#{@project.id}")
 	end

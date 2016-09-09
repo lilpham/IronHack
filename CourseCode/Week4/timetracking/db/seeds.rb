@@ -26,7 +26,7 @@ Project.create!(name: 'Water', description:'my everything')
 
 Project.create!(name: 'Chapstick', description:'Lip love')
 
-ironhack.time_entries.create(hours: 5, minutes: 3, date: 2016-09-09)
-ironhack.time_entries.create(hours: 4, minutes: 34)
-ironhack.time_entries.create(hours: 2, minutes: 29)
-ironhack.time_entries.create(hours: 1, minutes: 40)
+timetracker.time_entries.create(hours: 5, minutes: 3, date: 2016-09-09)
+timetracker.time_entries.create(hours: 4, minutes: 34)
+timetracker.time_entries.create(hours: 2, minutes: 29)
+timetracker.time_entries.create(hours: 1, minutes: 40)
