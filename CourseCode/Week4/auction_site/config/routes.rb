@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-	get '/index', to: 'products#index'
+	root :to => "site#home"
 
-	get '/users/new', to: 'users#new'
+	resources :users, only:[:index, :show, :new, :create] do
+		resources :products
+	end
 
-	post '/users', to: 'users#create'
+	# get '/index', to: 'products#index'
 
-	get '/users/:id', to: 'users#show'
+	# get '/users/new', to: 'users#new'
 
-	get '/users/:id/product/new', to: 'product#new'
+	# post '/users', to: 'users#create'
+
+	# get '/users/:id', to: 'users#show'
+
+	# get '/users/:id/product/new', to: 'product#new'
 end
 
 
