@@ -21,8 +21,12 @@ class ProjectsController < ApplicationController
 			name: params[:project][:name],
 			description: params[:project][:description])
 
-		@project.save
-
-		redirect_to("/projects/#{@project.id}")
+		if @project.save
+			flash[:notice] = "Project successfully created!"
+			redirect_to("/projects/#{@project.id}")
+		else
+			flash[:alert] = "Please fill text fields with characters"
+			render "new"
+		end
 	end
 end

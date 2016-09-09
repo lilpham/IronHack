@@ -1,4 +1,9 @@
 <h2> New Project </h2>
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% else flash[:alert] %>
+	<%= flash[:alert] %>
+<%end%>
 
 
 <!-- <form action="input"> -->
