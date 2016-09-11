@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 	def home
 		@products = Product.all
+		@user = User.find_by(params[:user_id])
 	end 
 	
 	def new
@@ -17,4 +18,9 @@ class ProductsController < ApplicationController
 			)	
 
 	end 
+
+	def show
+		@user = User.find_by(params[:user_id])
+		@products = Product.find_by(id: params[:id])
+	end
 end

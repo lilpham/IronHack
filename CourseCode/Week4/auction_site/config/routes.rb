@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	root :to => "products#home"
-	resources :users, only:[:index, :show, :new, :create] do
+	resources :users do
 		resources :products
 	end
 end

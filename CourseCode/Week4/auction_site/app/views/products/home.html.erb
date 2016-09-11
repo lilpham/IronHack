@@ -3,12 +3,8 @@
 <ul>
 	<% @products.each do |product| %>
 	<li>
-		<%= product.title %>
-		<br>
-		<%= product.description %>
-		<br>
-		<%= product.deadline %>
-		<br>
+		<%= link_to product.title, user_product_path(product.id, @user.id) %>
+		
 	</li>
 	<% end %>
 </ul>
