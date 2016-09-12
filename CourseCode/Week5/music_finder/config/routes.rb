@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-	resources: :concerts
+	resources :concerts, only: [:new, :create, :show]
 end
