@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  date: 2016-09-12 14:45:47
+  comment: 
+  concert: one
+
+two:
+  name: MyString
+  date: 2016-09-12 14:45:47
+  comment: 
+  concert: two

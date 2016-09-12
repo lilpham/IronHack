@@ -1,0 +1,8 @@
+<h3> Concerts Happening This Month: </h3>
+<ul>
+<% @concerts_today.each do |concert| %>
+<li>
+<%= link_to concert.artist, concert_path(concert) %>
+</li>
+<% end %>
+</ul>
