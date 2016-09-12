@@ -1,24 +1,9 @@
-<h3> Concerts Happening Today: </h3>
-<ul>
-	<% @concerts_month.each do |concert| %>
-<li>
-<%= link_to concert.artist %>
-</li>
-<%end%>
-</ul>
-
-<h3> Concerts Happening This Month: </h3>
-<ul>
-<% @concerts_today.each do |concert| %>
-<li>
-<%= link_to concert.artist %>
-</li>
+<% @concerts.each do |concert| %>
+	<p>Artist: <%= concert.artist %> </p>
+	<p>Venue: <%= concert.venue %> </p>
+	<p>City: <%= concert.city %> </p>
+	<p>Date: <%= concert.date %> </p>
+	<p>Price: <%= concert.price %> </p>
+	<p>Description: <%= concert.description %> </p>
+	<br>
 <% end %>
-</ul>
-
-<br>
-<footer>
-	<h4> <%= link_to "Add Concert", new_concert_path %> </h4>
-
-	<h4> View All Concerts </h4>
-</footer>

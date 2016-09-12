@@ -2,7 +2,7 @@
 <ul>
 	<% @concerts_month.each do |concert| %>
 <li>
-<%= link_to concert.artist %>
+<%= link_to concert.artist, concert_path %>
 </li>
 <%end%>
 </ul>
@@ -20,5 +20,5 @@
 <footer>
 	<h4> <%= link_to "Add Concert", new_concert_path %> </h4>
 
-	<h4> View All Concerts </h4>
+	<h4> <%= link_to "View All Concerts", concerts_path%> </h4>
 </footer>
