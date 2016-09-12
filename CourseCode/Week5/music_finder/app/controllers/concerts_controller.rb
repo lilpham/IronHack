@@ -21,9 +21,13 @@ class ConcertsController < ApplicationController
 			description: params[:concert][:description]
 			)
 		if @concert.save
-			redirect_to('/concerts/#{@concert.id}')
+			redirect_to("/concerts/#{@concert.id}")
 		else
 			render "new"
 		end
 	end 
+
+	def show
+		@concert = Concert.find(params[:id])
+	end
 end

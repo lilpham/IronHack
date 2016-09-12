@@ -1,12 +1,16 @@
 <h1> Concert Details </h1>
 
-<h2>Artist<%= @concert.artist %> </h2>
-<h4>Venue<%= @concert.venue %> </h4>
-<h4>City<%= @concert.city %> </h4>
-<h4>Date<%= @concert.date %> </h4>
-<h4>Price<%= @concert.price %> </h4>
-<h4>Description<%= @concert.description %> </h4>
+<h2>Artist: <%= @concert.artist %> </h2>
+<h4>Venue: <%= @concert.venue %> </h4>
+<h4>City: <%= @concert.city %> </h4>
+<h4>Date: <%= @concert.date %> </h4>
+<h4>Price: <%= @concert.price %> </h4>
+<h4>Description: <%= @concert.description %> </h4>
+<br>
+<%= link_to "Go Back", root_path %>
 
 <footer>
 	<h3>Comments:</h3>
 </footer>
+
+
