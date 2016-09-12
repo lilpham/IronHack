@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  date: 2016-09-12 14:45:47
-  comment: 
+  date: 2016-09-12 14:50:28
+  comment: MyText
   concert: one
 
 two:
   name: MyString
-  date: 2016-09-12 14:45:47
-  comment: 
+  date: 2016-09-12 14:50:28
+  comment: MyText
   concert: two

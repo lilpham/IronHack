@@ -11,6 +11,20 @@
 
 <footer>
 	<h3>Comments:</h3>
+	<% @comment.each do |comment| %>
+		<%= comment.name %>
+		<br>
+		<%= comment.date %>
+		<br>
+		<%= comment.comment %>
+		<br>
+		------
+		<br>
+	<% end %>
+
+	<%= link_to "Add Comment", concert_comment_path(@concert) %>
+	<%= link_to "Go Back", root_path %>
+
 </footer>
 
 

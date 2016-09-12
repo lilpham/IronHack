@@ -1,0 +1,14 @@
+<h2> Add Comment </h2>
+
+<%= form_for [@concert, @comment] do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :date %>
+	<%= f.date_field :date %>
+	<br>
+	<%= f.label :comment %>
+	<%= f.text_area :comment %>
+	<br>
+	<%= f.button "Comment" %>
+<% end %>

@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration[5.0]
     create_table :comments do |t|
       t.string :name
       t.datetime :date
-      t.text-area :comment
+      t.text :comment
       t.references :concert, foreign_key: true
 
       t.timestamps

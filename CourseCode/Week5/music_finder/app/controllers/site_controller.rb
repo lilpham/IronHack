@@ -5,7 +5,5 @@ class SiteController < ApplicationController
 
 		@concerts_month = Concert.where(
 			date: Time.now.end_of_day..Time.now.end_of_month)
-
-		render "sidebar"
 	end
 end
