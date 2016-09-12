@@ -5,7 +5,7 @@ class CreateConcerts < ActiveRecord::Migration[5.0]
       t.string :venue
       t.string :city
       t.datetime :date
-      t.string :price
+      t.integer :price
       t.text :description
 
       t.timestamps

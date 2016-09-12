@@ -4,14 +4,14 @@ one:
   artist: MyString
   venue: MyString
   city: MyString
-  date: 2016-09-12 10:50:49
-  price: MyString
+  date: 2016-09-12 10:54:23
+  price: 1
   description: MyText
 
 two:
   artist: MyString
   venue: MyString
   city: MyString
-  date: 2016-09-12 10:50:49
-  price: MyString
+  date: 2016-09-12 10:54:23
+  price: 1
   description: MyText
