@@ -1,7 +1,17 @@
-<% @concert.each do |concert| %>
-<%= link_to concert.artist %>
-<% end %>
+<h3> Concerts Happening Today: </h3>
 
+<h3> Concerts Happening This Month: </h3>
+<ul>
+<% @concert.each do |concert| %>
+<li>
+<%= link_to concert.artist %>
+</li>
+<% end %>
+</ul>
+
+<br>
 <footer>
+	<h4> <%= link_to "Add Concert", new_concert_path %> </h4>
+
 	<h4> View All Concerts </h4>
 </footer>

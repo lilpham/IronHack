@@ -1,28 +1,42 @@
 <h1> Add Concert </h1>
 
-<%= concert.erros.full_messages %>
 
 <%= form_for @concert do |f| %>
+	<div>
 	<%= f.label :artist %>
 	<%= f.text_field :artist %>
-	<br>
-
+	</div>
+	<div>
 	<%= f.label :venue %>
 	<%= f.text_field :venue %>
-	<br>
-
+	</div>
+	
+	<div>
 	<%= f.label :city %>
 	<%= f.text_field :city %>
-	<br>
-
+	</div>
+	
+	<div>
 	<%= f.label :date %>
 	<%= f.date_field :date %>
-	<br>
+	</div>
 
+	<div>
 	<%= f.label :price %>
 	<%= f.text_field :price %>
-	<br>
+	</div>
 
-	<%= f.label :description %>
+	<div>
+	<%= f.label :description %> <br>
 	<%= f.text_area :description %>
+	</div>
+	<%= f.button %>
 <% end %>
+
+<%= @concert.errors.full_messages %>
+
+
+<br>
+<footer>
+	<%= link_to "Go Back", concerts_path %>
+</footer>

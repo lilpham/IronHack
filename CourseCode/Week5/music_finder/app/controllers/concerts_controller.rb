@@ -1,6 +1,6 @@
 class ConcertsController < ApplicationController
 	def index
-		@concert = Concert.all
+		@concert = Concert.where(date: Time.today)
 	end 
 
 	def show
@@ -21,7 +21,7 @@ class ConcertsController < ApplicationController
 			description: params[:concert][:description]
 			)
 		if @concert.save
-			redirect_to('/concerts')
+			redirect_to('/concert/#{@concert.id}')
 		else
 			render "new"
 		end
