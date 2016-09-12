@@ -13,12 +13,12 @@ class ConcertsController < ApplicationController
 
 	def create
 		@concert = Concert.new(
-			:artist params[:concert][:artist]
-			:venue params[:concert][:venue]
-			:city params[:concert][:city]
-			:date params[:concert][:date]
-			:price params[:concert][:price]
-			:description params[:concert][:description]
+			artist: params[:concert][:artist],
+			venue: params[:concert][:venue],
+			city: params[:concert][:city],
+			date: params[:concert][:date],
+			price: params[:concert][:price],
+			description: params[:concert][:description]
 			)
 		if @concert.save
 			redirect_to('/concerts')
