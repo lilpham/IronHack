@@ -1,5 +1,10 @@
 class ConcertsController < ApplicationController
+	def index
+		@concert = Concert.all
+	end 
+
 	def show
+		@concert = Concert.find(params[:id])
 	end
 
 	def new
@@ -15,5 +20,10 @@ class ConcertsController < ApplicationController
 			:price params[:concert][:price]
 			:description params[:concert][:description]
 			)
+		if @concert.save
+			redirect_to('/concerts')
+		else
+			render "new"
+		end
 	end 
 end
