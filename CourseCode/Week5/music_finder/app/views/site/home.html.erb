@@ -15,8 +15,20 @@
 </li>
 <% end %>
 </ul>
-
 <br>
+
+<h3> Budget Fit </h3>
+<p> Find a concert that fits your budget!</p>
+
+	<%= form_tag("/search", method: "get") do %>
+	  <%= label_tag(:q, "Name your price:") %>
+	  <br>
+	  <%= text_field_tag(:q) %>
+	  <br>
+	  <%= submit_tag("Search") %>
+	<% end %>
+<br>
+
 <footer>
 	<h4> <%= link_to "Add Concert", new_concert_path %> </h4>
 

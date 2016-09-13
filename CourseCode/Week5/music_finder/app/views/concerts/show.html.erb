@@ -9,20 +9,24 @@
 <br>
 <%= link_to "Go Back", root_path %>
 
+
 <footer>
 	<h3>Comments:</h3>
+	<p>
 	<% @comment.each do |comment| %>
+	<div class="comments">
 		<%= comment.name %>
 		<br>
 		<%= comment.date %>
 		<br>
 		<%= comment.comment %>
 		<br>
-		------
-		<br>
+	</div>
+	<br>
 	<% end %>
+	</p>
 
-	<%= link_to "Add Comment", concert_comment_path(@concert) %>
+	<%= link_to "Add Comment", new_concert_comment_path(@concert) %>
 	<%= link_to "Go Back", root_path %>
 
 </footer>
