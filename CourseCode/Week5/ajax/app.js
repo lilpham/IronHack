@@ -3,6 +3,7 @@ console.log("We are WERQin");
 $(document).ready(function(){
 	$(".js-fetch-characters").on("click", fetchCharacters);
 	$(".js-add-yoda").on("click", addYoda);
+	$(".js-add-new-character").on("click", addNewCharacter);
 });
 
 function fetchCharacters () {
@@ -61,4 +62,15 @@ function updateList (response) {
 	console.log(response);
 }
 
+function addNewCharacter (theEvent) {
+	theEvent.preventDefault();
+
+	console.log("New Character Click")
+
+	var weapon = $(".js-weapon").val();
+
+	console.log(`Weapon: ${weapon}`);
+
+	//AJAX CODE HERE
+}
 
