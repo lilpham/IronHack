@@ -3,3 +3,15 @@ $('.btn-pepperonni').on('click', function () {
 	$('.pep').toggle();
 });
 
+$('.btn-pepperonni').on('click', function () {
+	$('.pep').toggle();
+});
+
+$('.btn-pepperonni').on('click', function () {
+	$('.pep').toggle();
+});
+
+$('.btn-pepperonni').on('click', function () {
+	$('.pep').toggle();
+});
+

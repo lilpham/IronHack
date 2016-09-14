@@ -1,31 +1,11 @@
 Rails.application.routes.draw do
-	root :to => "site#home"
 
 	resources :projects, only:[:index, :show, :new, :create] do 
 		resources :time_entries, except: [:show]
 	end
-	# get '/', to: 'site#home'
 
-	# get '/contact', to: 'site#contact'
-
-	# get '/say_name/:name', to: 'site#say_name'
-
-	# get '/projects', to: 'projects#index'
-
-	# get '/projects/new', to: 'projects#new'
-
-	# post '/projects', to: 'projects#create'
-
-	# get '/projects/:id', to: 'projects#show'
-
-	# get '/projects/:project_id/time_entries', to: 'time_entries#index'
-	# get '/projects/:project_id/time_entries/new', to: 'time_entries#new'
-
-	# get '/projects/:project_id/time_entries/new', to: 'time_entries#create', as: :project_time_entries
-
-	# post '/projects/:project_id/time_entries/new', to: 'time_entries#create'
-
-	# get '/projects/:project_id/time_entries/:id/edit', to: 'time_entries#edit'
-
-	# patch '/projects/:project_id/time_entries/:id', to: 'time_entries#update'
+	get '/', to: "site#home"
+	get '/contact', to: "site#contact"
+	get '/say_name', to: "site#say_name"
+c
 end

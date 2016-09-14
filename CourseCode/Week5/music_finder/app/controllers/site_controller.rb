@@ -5,5 +5,10 @@ class SiteController < ApplicationController
 
 		@concerts_month = Concert.where(
 			date: Time.now.end_of_day..Time.now.end_of_month)
+
+		@concerts = Concert.where(
+			price:
+			)
 	end
+
 end
