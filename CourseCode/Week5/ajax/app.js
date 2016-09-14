@@ -65,12 +65,19 @@ function updateList (response) {
 function addNewCharacter (theEvent) {
 	theEvent.preventDefault();
 
-	console.log("New Character Click")
-
-	var weapon = $(".js-weapon").val();
-
-	console.log(`Weapon: ${weapon}`);
-
+	var newFormCharacter = {
+		name: $(".js-name").val(),
+		weapon: $(".js-weapon").val(),
+		occupation: $(".js-occupation").val()
+	};
 	//AJAX CODE HERE
+
+	$.ajax ({
+		type: "POST",
+		url: "https://ironhack-characters.herokuapp.com/characters",
+		data: newFormCharacter,
+		success: updateList,
+		error: handleError
+	});
 }
 
