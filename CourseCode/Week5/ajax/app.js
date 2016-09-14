@@ -39,7 +39,26 @@ function handleError (error) {
 }
 
 function addYoda () {
-	console.log("Add Yoda Click");
+
+	var newCharacter = {
+		name: "Yoda",
+		occupation: "Jedi",
+		weapon: "Lightsaber"
+	};
 
 	//ADD AJAX CODE
+	$.ajax ({
+		type: "POST",
+		url: "https://ironhack-characters.herokuapp.com/characters",
+		data: newCharacter,
+		success: updateList,
+		error: handleError
+	});
 }
+
+function updateList (response) {
+	console.log("create yoda success");
+	console.log(response);
+}
+
+
