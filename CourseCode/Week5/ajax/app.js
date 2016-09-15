@@ -28,7 +28,7 @@ function showCharacters (response) {
 			<h2> ${theCharacter.occupation} </h2>
 			<h2> ${theCharacter.weapon} </h2>
 		 </li>`;
-		$('.js-characters-list').append(html);
+		$('.js-characters-list').apppend(html);
 	});
 
 	console.log(charactersArray);
