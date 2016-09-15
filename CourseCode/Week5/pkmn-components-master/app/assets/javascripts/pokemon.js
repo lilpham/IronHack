@@ -19,7 +19,53 @@ PokemonApp.showPokemonModal = function (result) {
 	console.log("Pokemon Info:");
 	console.log(result);
 
+	console.log(`Name: ${result.name}`)
+	$(".js-poke-name").html(result.name);
+
+	console.log(`Number: ${result.pkdx_id}`)
+	$(".js-poke-number").html(`${result.pkdx_id}`);
+
+	console.log(`Height: ${result.height}`)
+	$(".js-poke-height").html(result.height);
+
+	console.log(`Weight: ${result.weight}`)
+	$(".js-poke-weight").html(result.weight);
+
+	$(".js-poke-hp").html(result.hp);
+	$(".js-poke-attack").html(result.attack);
+	$(".js-poke-defense").html(result.defense);
+	$(".js-poke-sp-atk").html(result.sp_atk);
+	$(".js-poke-sp-def").html(result.sp_def);
+	$(".js-poke-speed").html(result.speed);
+	$(".js-poke-type1").html(result.types[0].name);
+
+	console.log(result.types[0].name)
+	if (result.types[1] !== undefined) {
+		$(".js-poke-type2").html(result.types[1].name)
+	}
+	
 	$(".js-pokemon-modal").modal("show");
+};
+
+PokemonApp.PokemonEvolutions = function (id, info) {
+	this.id = id;
+	this.info = info;
+
+	console.log(id);
+	console.log(info);
+};
+
+
+PokemonApp.PokemonEvolutions.prototype.render = function() {
+	console.log("Rendering evolutions for: #" + this.id);
+
+	$.ajax ({	
+			type: "GET",
+			url: `api/v1/pokemon/${this.id}`,
+			success: PokemonApp.PokemonEvolutions,
+			error: PokemonApp.handleError
+		});
+
 };
 
 PokemonApp.handleError = function (theError) {
@@ -38,6 +84,10 @@ PokemonApp.idFromUri = function (pokemonUri) {
 $(document).ready(function (){
 	$(".js-show-pokemon").on("click", function (theEvent){
 		console.log("CLICK");
+
+	$(".js-pokemon-evolutions").on("click", function (theEvent){
+		console.log("Click Evolutions")
+	});
 		
 	// date-pokemon-uri="api/v1/pokemon/57"
 
