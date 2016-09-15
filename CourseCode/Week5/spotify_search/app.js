@@ -64,21 +64,27 @@ function fetchAlbums (theEvent) {
 
 function showAlbums (response) {
 	console.log("Album Info:");
-	console.log(response);
+	console.log(response.items);
 
+	var album = response.items;
 
-	// var artist = response.;
-	// //show artist found
+	album.forEach(function (theAlbum) {
+		if (theAlbum.images[0]) {
+				var html =
+				`<li>
+					<h3> "${theAlbum.name}" </h3>
+					<br>			
+					<img src = ${theAlbum.images[1].url}>
+				</li>`;
+				$(".js-album-list").append(html);
+		}
+	});
 
-	// artist.forEach(function (theArtist) {
-	// 	var html =
-	// 	`<li>
-	// 		<button class = "js-album-search" data-artistid = "${theArtist.id}">
-	// 		<h3> ${theArtist.name} </h3>
-	// 		</button>
-	// 		<br>			
-	// 		<img src = ${theArtist.images[1].url}>
-	// 	</li>`;
-	// 	$(".js-artist-list").append(html);
-	// });
+	$(".js-album-modal").modal("show");
+
 }
+
+
+
+
+

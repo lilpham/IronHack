@@ -4,9 +4,15 @@
 	<meta charset="utf-8">
 	<title>Spotify Search</title>
 	
+
 	<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<script src = "app.js" script type="text/javascript"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 
 <body>
@@ -25,6 +31,28 @@
 			</button>
 		</li>
 	</ul>
+
+<div class="modal fade js-album-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">
+          <span>&times;</span>
+        </button>
+
+      </div><!-- .modal-header -->
+
+      <div class="modal-body">
+		<ul class="js-album-list">
+	
+		</ul>
+       
+      </div><!-- .modal-body -->
+
+    </div><!-- .modal-content -->
+  </div><!-- .modal-dialog -->
+</div><!-- .modal -->
 
 
 </body>
