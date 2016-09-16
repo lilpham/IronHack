@@ -1,5 +1,7 @@
 $(document).ready(function (){
 	$(".js-search").on("click", searchTrack)
+	$(".btn-play").on("click", playTrack)
+	$('.js-audio').on('timeupdate', printTime);
 
 });
 
@@ -39,14 +41,35 @@ function showResult (response) {
 	$(".js-cover-img").attr("src",result.album.images[0].url);
 
 	console.log(result.preview_url);
-	$(".js-audio").attr("src",result.album.preview_url);
+	$(".js-audio").attr("src",result.preview_url);
+
+
+
+	$(".btn-play").toggleClass("disabled")
+
 
 }
+
+function playTrack (theEvent){
+		$(".btn-play").toggleClass("playing")
+			$(".js-audio").trigger("pause");
+
+			if ($(".btn-play").hasClass("playing")){
+				$(".js-audio").trigger("play");
+			};		
+}
+
 
 function handleError (error) {
 	console.log("Error");
 	console.log(error.ResponseText);
 }
 
+function printTime () {
+	value = 0
+  var current = $('.js-audio').prop('currentTime');
+  	$(".js-seekbar").attr("value", current);
 
+  console.debug('Current time: ' + current);
+}
 

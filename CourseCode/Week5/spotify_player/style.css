@@ -154,6 +154,14 @@ progress::-moz-progress-bar {
   background-color: #45a800;
 }
 
+h1 {
+  font-family: "intro";
+  background-color: #CFDEC8;
+  padding: 10px;
+  margin: 8px;
+}
+
+
 
 .js-track-title {
   font-size: 14px;

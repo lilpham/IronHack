@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<header><h1> Spotify Player </h1></header>
 
 	<div class= "search-form">
 		<form>
@@ -26,9 +27,12 @@
 		<div class="header">
 		<!-- Try adding/removing these classes: -->
 		<!-- disabled -->
-		<!-- playing -->
-		<div class="btn-playing active">
-			
+		<!-- playing --> 
+
+		<div class="btn-play disabled">
+
+			<audio class="js-audio" audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+
 		</div>
 
 		<div class="metadata">
@@ -36,7 +40,7 @@
 		  <p class="js-artist-name">alt-J</p>
 
 		  <div class="seekbar">
-		    <progress value="5" max="30"></progress>
+		    <progress class="js-seekbar" value="0" max="30"></progress>
 		  </div>
 		</div>
 		</div>
@@ -44,7 +48,6 @@
 		<img class="js-cover-img" img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
 		</div>
 
-		<audio class="js-audio" audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 	</div>
 
 </body>
