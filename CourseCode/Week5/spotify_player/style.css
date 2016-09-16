@@ -153,3 +153,9 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: #45a800;
 }
+
+
+.js-track-title {
+  font-size: 14px;
+  font-weight: bolder;
+}
