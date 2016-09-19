@@ -4,4 +4,9 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first
+
+roast_beef = Sandwich.create!(name:"Roast Beefy",bread_type:"Italian")
+hot_pastrami = Sandwich.create!(name:"Hot Pastrami",bread_type:"Wheat")
+meatball = Sandwich.create!(name:"Meatball",bread_type:"Parmesan Oregano")
+
