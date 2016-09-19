@@ -16,8 +16,16 @@ class SandwichesController < ApplicationController
 				status: 404
 			return
 		end
-		render json: sandwich
+		render json: sandwich, include:[:ingredients]
 	end 
+
+	def add_ingredient
+		sandwich = Sandwich.find(params[:sandwich_id])
+		ingredient = Ingredient.find(params[:ingredient_id])
+		sandwich.ingredients.push(ingredient)
+
+		render json: sandwich, include:[:ingredients]
+	end
 
 	def update
 		sandwich = Sandwich.find_by(id: params[:id])
@@ -49,5 +57,4 @@ class SandwichesController < ApplicationController
 		params.require(:sandwich)
 			.permit(:name, :bread_type)
 	end
-
 end
