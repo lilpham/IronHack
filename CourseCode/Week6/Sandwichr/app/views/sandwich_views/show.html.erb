@@ -9,10 +9,13 @@
 <br>
 <h3> Ingredients:</h3>
 
+<div class="js-ing-list">
 <% @ingredients.each do |ingredient| %>
- 	<li><%= ingredient.name %></li>
- <% end %>
-
+ 	<li>
+ 	<%= ingredient.name %>
+ 	</li>
+ <% end %> 
+ </div>
 
 
 <h2> Add Ingredient </h2>
@@ -29,6 +32,12 @@
 		</button>
 	</div>
 
-	</li>
+	<ul class="js-ingredient-list"></ul>
+	<form>
+	
+	</form>
+	
+
+	
 	<% end %>
 

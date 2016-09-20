@@ -20,34 +20,49 @@ $(document).on("turbolinks:load" , function() {
 
 	$(".js-btn-add-ing").on("click", fetchIngredient)
 
-function fetchIngredient (theEvent){
-	console.log("Add Ingredient click");
-	theEvent.preventDefault();
+	function fetchIngredient (theEvent){
+		console.log("Add Ingredient click");
+		theEvent.preventDefault();
 
-	var ingredient_id = $(theEvent.currentTarget).data("adding")
-	var sandwich_id = $(theEvent.currentTarget).data("sandwichid")
+		var sandwich_id = $(theEvent.currentTarget).data("sandwichid")
+		var ingredient_id = $(theEvent.currentTarget).data("adding")
+		  //    |
+		  //    ---------------------------------------------------------
+		  															//  |
+		$.ajax ({                                                   //  |
+			type: "POST",                                           //  |
+			url: `/api/sandwiches/${sandwich_id}/ingredients/add`,  //  |
+			  // params[:ingredient_id]                             //  |
+			  //           |                   						//  |
+			data: {ingredient_id: ingredient_id},	                //  |
+			success: addIngredient,   // |                          //  |
+			error: handleError,       // --------------------------------
+		});
 
+	}
 
-	$.ajax ({
-		type: "POST",
-		url: `/api/sandwiches/${sandwich_id}/ingredients/add`,
-		success: addIngredient,
-		error: handleError,
-	});
+	function handleError (error) {
+		console.log("error");
+		console.log(error.ResponseText);
+	}
 
-}
+	function addIngredient (response) {
+		console.log("Add Ingredient Clicked Again")
+		console.log(response.ingredients)
 
-function handleError (error) {
-	console.log("error");
-	console.log(error.ResponseText);
-}
+		var ing_array = response.ingredients
+		$('.js-ing-list').empty();
 
-function addIngredient (response) {
-	console.log("Add Ingredient Clicked Again")
-
-
-}
-
+		ing_array.forEach(function (theIngredient){
+			var new_ingredient = `	
+			<li>
+				${theIngredient.name}
+			</li>
+			`;
+			$('.js-ing-list').append(new_ingredient)
+		})
+		console.log("Successssss!!!");
+	}
 
 });
 
