@@ -14,3 +14,40 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).on("turbolinks:load" , function() {
+
+	$(".js-btn-add-ing").on("click", fetchIngredient)
+
+function fetchIngredient (theEvent){
+	console.log("Add Ingredient click");
+	theEvent.preventDefault();
+
+	var ingredient_id = $(theEvent.currentTarget).data("adding")
+	var sandwich_id = $(theEvent.currentTarget).data("sandwichid")
+
+
+	$.ajax ({
+		type: "POST",
+		url: `/api/sandwiches/${sandwich_id}/ingredients/add`,
+		success: addIngredient,
+		error: handleError,
+	});
+
+}
+
+function handleError (error) {
+	console.log("error");
+	console.log(error.ResponseText);
+}
+
+function addIngredient (response) {
+	console.log("Add Ingredient Clicked Again")
+
+
+}
+
+
+});
+
