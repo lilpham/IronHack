@@ -1,14 +1,7 @@
 class UsersController < ApplicationController
-
-  # renders the home page
+  before_action :user_setup, only:[:home, :index, :show]
+  # => renders the home page
 def home
-  @current_user = User.find_by(id: session[:user_id])
-
-  if @current_user
-    @name = @current_user.username
-  else
-    @name = "Ironhack"
-  end
 
   render :home 
 end
@@ -22,13 +15,11 @@ end
   end
 
   def show
-     @current_user = User.find_by(id: session[:user_id])
-
-    if @current_user
-      @name = @current_user.username
-    else
-      @name = "Ironhack"
-  end
+    if @current_user 
+      render :show
+    else 
+      redirect_to '/'
+    end
   end
 
   # receives form and creates a user from that data

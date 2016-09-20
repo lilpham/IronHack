@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
 	def new
+		if @current_user 
+			redirect_to '/'
+		else
+			render :new
+		end
 	end
 
 	def create
@@ -13,7 +18,7 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		session.clear
+		session.destroy
 		redirect_to '/'
 	end
 
