@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :user_setup, only:[:home, :index, :show]
+  before_action :user_setup, only:[:new, :home, :index, :show]
+  before_action :redirect_if_already_logged_in, only: [:new]
+  before_action :redirect_if_not_logged_in, only: [:show]
   # => renders the home page
 def home
 
@@ -12,14 +14,11 @@ end
 
   # renders the signup form
   def new
+    # redirect_if_already_logged_in
   end
 
   def show
-    if @current_user 
-      render :show
-    else 
-      redirect_to '/'
-    end
+    # redirect_if_not_logged_in
   end
 
   # receives form and creates a user from that data

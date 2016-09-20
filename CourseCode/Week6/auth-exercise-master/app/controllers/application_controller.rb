@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
 
   protected 
-  
+
   def user_setup
      @current_user = User.find_by(id: session[:user_id])
 
@@ -16,5 +16,20 @@ class ApplicationController < ActionController::Base
       @name = "Ironhack"
     end
 
+  end 
+
+  def redirect_if_not_logged_in
+  	if @current_user == nil
+  		flash[:message] = "You need to login before to visit that page"
+  		redirect_to '/login'
+  	end
+  end 
+
+  def redirect_if_already_logged_in
+  	if @current_user 
+  		flash[:message] = "You are already logged in"
+
+  		redirect_to '/'
+  	end
   end 
 end
