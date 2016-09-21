@@ -9,6 +9,20 @@
   </head>
 
   <body>
+
+  	<% if user_signed_in? %>
+  		<h1> Welcome, <%=current_user.name %> ! </h1>
+  		
+  	<% end %>
+
     <%= yield %>
+   
+    <hr>
+
+
+    <% if user_signed_in? %>
+  		<%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+  	<% end %>
+    <h4> Made with &hearts; by Dan and Lil </h4>
   </body>
 </html>
