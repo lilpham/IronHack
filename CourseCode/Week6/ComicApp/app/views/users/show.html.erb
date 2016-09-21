@@ -1,0 +1,20 @@
+<h1>User Details:</h1>
+
+<% if current_user == @user %>
+	<h2>This is your profile</h2>
+<% else %>
+	<h2>User Profile:</h2>
+<% end %>
+
+<h3> <%= @user.name %> </h3>
+
+<h2>Favorite Comics:</h2>
+<ul>
+	<% @user.comics.each do |comic| %>
+	<li><%= comic.title %></li>
+	<li><%= comic.publisher %></li>
+	<%end%>
+</ul>
+
+<%= link_to "Go Back", root_path %>
+
