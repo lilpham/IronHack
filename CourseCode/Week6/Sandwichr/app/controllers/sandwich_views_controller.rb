@@ -1,4 +1,6 @@
 class SandwichViewsController < ApplicationController
+		before_action :authenticate_user!, only: [:index, :show]
+
 	def index
 		@sandwich = Sandwich.all
 	end
