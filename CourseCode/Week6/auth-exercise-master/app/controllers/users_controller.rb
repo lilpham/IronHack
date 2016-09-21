@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   before_action :redirect_if_not_admin, only: [:index]
   # => renders the home page
 def home
-
   render :home 
 end
 
